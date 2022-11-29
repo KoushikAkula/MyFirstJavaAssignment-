@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class Myfirst{
+    static double CF(double val){
+        double ans=(val*9/5)+32;
+        return ans;
+    }
+    static double CK(double val){
+        double ans=val+273.15;
+        return ans;
+    }
+    static double FC(double val){
+        double ans=(val-32)*5/9;
+        return ans;
+    }
+    static double FK(double val){
+        double ans=(val-32)*5/9+273.15;
+        return ans;
+    }
+     static double KC(double val){
+            double ans=val-273.15;
+            return ans;
+    }
+    static double KF(double val){
+            double ans=(val-273.15)*9/5+32;
+            return ans;
+    }
+    
+   public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       String src=sc.nextLine();
+       String tar=sc.nextLine();
+       int val=sc.nextInt();
+       if(src.equals("C") && tar.equals("K")){
+               System.out.println(val+" "+"Degree"+" "+"Celcius"+" "+"is"+" "+"equal"+" "+"to"+" "+CK(val)+" "+"Kelvin");
+        }
+       else if(src.equals("C") && tar.equals("F")){
+           System.out.print(val+" "+"Degree"+" "+"Celcius"+" "+"is"+" "+"equal"+" "+"to"+" "+CF(val)+" "+"Fahrenheit");
+        }
+       else if(src.equals("F") && tar.equals("C")){
+           System.out.print(val+" "+"Degree"+" "+"Fahrenheit"+" "+"is"+" "+"equal"+" "+"to"+" "+FC(val)+" "+"Celsius");
+        }
+       
+       else if(src.equals("F") && tar.equals("K")){
+           System.out.print(val+" "+"Degree"+" "+"Fahrenheit"+" "+"is"+" "+"equal"+" "+"to"+" "+FK(val)+" "+"Kelvin");
+       }
+       else if(src.equals("K") && tar.equals("F")){
+           System.out.print(val+" "+"Degree"+" "+"Kelvin"+" "+"is"+" "+"equal"+" "+"to"+" "+KF(val)+" "+"Fahrenheit");
+        }
+       else if(src.equals("K") && tar.equals("C")){
+               System.out.print(val+" "+"Degree"+" "+"Kelvin"+" "+"is"+" "+"equal"+" "+"to"+" "+KC(val)+" "+"Celsius");
+       }
+   }
+}
